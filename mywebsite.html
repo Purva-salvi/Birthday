@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Love!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #3e2723;
+      color: #fffaf0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+      padding: 20px;
+    }
+    .active {
+      display: flex !important;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #8d6e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 10px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #a1887f;
+      transform: scale(1.05);
+    }
+    .poem, .contract {
+      padding: 30px;
+      background: #f5e8da;
+      color: #3e2723;
+      border-radius: 12px;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .collage img {
+      max-width: 90%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      border: 3px solid #fffaf0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hearts {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #ffc0cb;
+      transform: rotate(45deg);
+      animation: heartFall 5s infinite;
+    }
+    .hearts::before, .hearts::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #ffc0cb;
+      border-radius: 50%;
+    }
+    .hearts::before {
+      top: -7px;
+      left: 0;
+    }
+    .hearts::after {
+      left: -7px;
+      top: 0;
+    }
+    @keyframes heartFall {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
+    }
+    .popper {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle at center, #ffe082, #ffca28);
+      border-radius: 50%;
+      position: absolute;
+      animation: pop 1s ease-in-out forwards;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @keyframes pop {
+      0% { transform: scale(0.3) translate(-50%, -50%); opacity: 0; }
+      50% { transform: scale(1.5) translate(-50%, -50%); opacity: 1; }
+      100% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Start Button Screen -->
+  <div class="screen active" id="startScreen">
+    <img src="C://Users//HP//OneDrive//Desktop//Happy birthday//d35167d3-5583-4a94-a09d-b1ff0a6ecfeb.jpeg" alt="Flower Bouquet" style="width: 200px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+    <button onclick="goToNext('question1')">START</button>
+  </div>
+
+  <!-- Question Screens -->
+  <div class="screen" id="question1">
+    <div class="poem">
+      <h2>Q1: What's your favorite way to annoy me? 😆</h2>
+      <button onclick="goToNext('question2')">Steal your food 😈</button>
+      <button onclick="goToNext('question2')">Poke you until you go crazy 🐒</button>
+    </div>
+  </div>
+  <div class="screen" id="question2">
+    <div class="poem">
+      <h2>Q2: If we got a pet, what would we name it?</h2>
+      <button onclick="goToNext('question3')">Biryani 🐾</button>
+      <button onclick="goToNext('question3')">Cutie Singh 😹</button>
+    </div>
+  </div>
+  <div class="screen" id="question3">
+    <div class="poem">
+      <h2>Q3: Where do we go on our dream date?</h2>
+      <button onclick="goToNext('question4')">Beach picnic at sunset 🌅</button>
+      <button onclick="goToNext('question4')">Mountain view and Maggi ⛰️🍜</button>
+    </div>
+  </div>
+  <div class="screen" id="question4">
+    <div class="poem">
+      <h2>Q4: If I’m sad, what would you do?</h2>
+      <button onclick="goToNext('question5')">Hold you like a burrito 🌯</button>
+      <button onclick="goToNext('question5')">Tell lame jokes until you laugh 😄</button>
+    </div>
+  </div>
+  <div class="screen" id="question5">
+    <div class="poem">
+      <h2>Q5: What's our forever rule?</h2>
+      <button onclick="goToNext('letterScreen')">No sleeping angry 😴❌</button>
+      <button onclick="goToNext('letterScreen')">Cuddle even in fights 🤗</button>
+    </div>
+  </div>
+
+  <!-- Letter Screen -->
+  <div class="screen" id="letterScreen">
+    <div class="poem">
+      <h2>To the birthday boy who stole my peace and made it better,</h2>
+      <p>You know, the day I first texted you, I didn't know I was signing up for a love story with plot twists, soft boy gestures, and an unskippable main character—you.</p>
+      <p>From that very first “hey” (which probably took me 20 minutes to type and retype), there hasn't been a single second of regret. You were the calm in my chaos, the playlist I didn’t know I needed, and the boy who somehow managed to become the most comfortable place in the world.</p>
+      <p>I still laugh at how you casually made my brain start orbiting around you. Like?? Who gave you that power??</p>
+      <p>You do the smallest things in the biggest ways—like wiping off dusty seats just so I could sit like a spoiled princess. You catch autos like you’re catching feelings. You make me walk on the safer side of the path even when I pretend I don’t notice, and you make sure I know I’m beautiful—even when I’m cranky.</p>
+      <p>You’ve never half-loved me. Not even once. You’ve shown up with your full heart, full voice, and full compliments—even when I couldn’t return the energy.</p>
+      <p><em>You were never a chapter, you were my whole plotline,<br>In every lifetime, I’d still want you to be mine.</em></p>
+      <button onclick="goToNext('contractScreen')">Next</button>
+    </div>
+  </div>
+
+  <!-- Contract Screen -->
+  <div class="screen" id="contractScreen">
+    <div class="contract">
+      <h2>Our Forever Contract 💍</h2>
+      <ol>
+        <li>We will keep dating even after we get married.</li>
+        <li>There will be forehead kisses and "you're so pretty" texts—even with walking sticks.</li>
+        <li>You’ll keep cleaning dusty seats and catching autos for me.</li>
+        <li>Compliments will continue at random—"You look hot doing the dishes." ✅</li>
+        <li>Mirror messages are mandatory in our washroom!</li>
+        <li>No saying no to surprise pets I bring home.</li>
+        <li>Love notes in lunchboxes, sleepy cuddles, and "I miss you" texts—even in the same room.</li>
+        <li>Wherever life takes us—we choose each other. Always.</li>
+      </ol>
+      <p><strong>By agreeing, you’re stuck with me forever.</strong> Even if I snore. Even if you steal the blanket.</p>
+      <button onclick="goToNext('collageScreen')">I Agree 💖</button>
+    </div>
+  </div>
+
+  <!-- Collage Screen -->
+  <div class="screen" id="collageScreen">
+    <div class="collage">
+      <h2>Cutie pookie hukusfbrghtgjn hehe love ya 📸</h2>
+      <img src="C://Users//HP//OneDrive//Desktop//Happy birthday//IMG-20241223-WA0018.jpg">
+      <button onclick="goToNext('finalScreen')">Lastly 💥</button>
+    </div>
+  </div>
+
+  <!-- Final Screen -->
+  <div class="screen" id="finalScreen">
+    <div class="poem">
+      <h1>HAPPY BIRTHDAY, MY LOVE! 🎂</h1>
+      <p>You are my today, my tomorrow, my always. 💗</p>
+    </div>
+  </div>
+
+  <script>
+    function goToNext(id) {
+      document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
+      const next = document.getElementById(id);
+      if (next) {
+        next.classList.add('active');
+        if (id === 'collageScreen') {
+          for (let i = 0; i < 25; i++) {
+            const heart = document.createElement("div");
+            heart.classList.add("hearts");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+            document.body.appendChild(heart);
+          }
+        }
+        if (id === 'finalScreen') {
+          const pop = document.createElement("div");
+          pop.classList.add("popper");
+          document.body.appendChild(pop);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
