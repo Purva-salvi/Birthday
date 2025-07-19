@@ -13,8 +13,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 20px;
+      box-sizing: border-box
     }
     .screen {
       display: none;
@@ -37,25 +40,34 @@
       cursor: pointer;
       font-size: 18px;
       margin: 10px;
+      width: auto;
+      font size: 1 rem;
+      max-width: 90%;
       transition: background 0.3s, transform 0.2s;
     }
     button:hover {
       background-color: #a1887f;
       transform: scale(1.05);
+      text-align: centre;
     }
     .poem, .contract {
-      padding: 30px;
+      padding: 20px;
       background: #f5e8da;
       color: #3e2723;
       border-radius: 12px;
       max-width: 700px;
+      width: 90%;
+      margin: 20px auto;
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      box-sizig: border-box;
     }
     .collage img {
       max-width: 90%;
       border-radius: 12px;
       margin-bottom: 10px;
       border: 3px solid #fffaf0;
+      text-align: centre;
+      padding: 10px;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
